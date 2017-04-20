@@ -1,0 +1,28 @@
+{
+	
+	"manifest_version": 2,
+	"name": "The first trail",
+	"description": "The first trail for NoNudityOnNet",
+	"version": "1.0",
+
+	"browser_action": {
+		"default_icon":"myicon.png",
+		"default_popup":"thecode.html",
+		"default_title":"NoNudityOnNet"
+
+	},
+	"permisson":[
+		"tabs",
+		"activeTabs"
+	],
+	"background": {
+    "scripts": ["background.js"]
+  },
+	"content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"]
+    }
+  ]
+   
+}
